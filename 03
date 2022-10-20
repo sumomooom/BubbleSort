@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+    int i, num;
+    printf("データ数の指定：");
+    scanf("%d", &num);
+
+    for (i = 0; i < num; i++)
+    {
+        printf("%d ", rand() % 10 + 1);
+    }
+
+    void SortBubble(int array[], int num)
+    {
+        int i, j, temp;
+        for (i = 0; i < num - 1; i++)
+        {
+            for (j = 0; j < num - 1; j++)
+            {
+                if (array[j + 1] < array[j])
+                {
+                    temp = array[j];
+                    array[j] = array[j + 1];
+                    array[j + 1] = temp;
+                }
+            }
+        }
+    }
+    return 0;
+}
